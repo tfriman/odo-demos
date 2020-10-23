@@ -4,6 +4,18 @@ This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
+
+## Generation
+mvn io.quarkus:quarkus-maven-plugin:1.9.0.Final:create \
+	-DprojectGroupId=org.acme \
+	-DprojectArtifactId=mongodb-quickstart \
+	-DclassName="org.acme.mongodb.FruitResource" \
+	-Dpath="/fruits" \
+	-Dextensions="resteasy-jsonb,mongodb-client,resteasy-mutiny,context-propagation"
+
+docker run -ti --rm -p 27017:27017 mongo:4.0
+
+
 ## Running the application in dev mode
 
 You can run your application in dev mode that enables live coding using:
