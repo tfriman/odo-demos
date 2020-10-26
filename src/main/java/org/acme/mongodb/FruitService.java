@@ -25,6 +25,7 @@ public class FruitService {
                 Fruit fruit = new Fruit();
                 fruit.setName(document.getString("name"));
                 fruit.setDescription(document.getString("description"));
+                fruit.setId(document.get("_id").toString());
                 list.add(fruit);
             }
         } finally {
