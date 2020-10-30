@@ -18,6 +18,11 @@ components:
       name: quark-mongo-8080
       targetPort: 8080
       protocol: http
+    - exposure: public
+      path: /
+      name: monqua-8080
+      targetPort: 8080
+      protocol: http
     image: quay.io/eclipse/che-quarkus:nightly
     memoryLimit: 1512Mi
     mountSources: true

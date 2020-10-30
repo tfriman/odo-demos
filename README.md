@@ -1,16 +1,23 @@
-# mongodb-quickstart project
+# Developing quarkus app with mongodb backend using odo
 
-Demo project for ODO. Quarkus REST API with MongoDB backend.
+Demo project for ODO. Quarkus REST API with MongoDB backend. Devfile
+has mongodb container configured so you don't have to have it anywhere
+to start developing.
+
+
+## Get odo
+
+[odo.dev](http://odo.dev)
 
 ## Project generation
 
 ```shell script
 mvn io.quarkus:quarkus-maven-plugin:1.9.0.Final:create \
-	-DprojectGroupId=org.acme \
-	-DprojectArtifactId=mongodb-quickstart \
-	-DclassName="org.acme.mongodb.FruitResource" \
-	-Dpath="/fruits" \
-	-Dextensions="resteasy-jsonb,mongodb-client,resteasy-mutiny,context-propagation"
+    -DprojectGroupId=org.acme \
+    -DprojectArtifactId=mongodb-quickstart \
+    -DclassName="org.acme.mongodb.FruitResource" \
+    -Dpath="/fruits" \
+    -Dextensions="resteasy-jsonb,mongodb-client,resteasy-mutiny,context-propagation"
 ```
 
 ## Running locally
@@ -23,7 +30,10 @@ docker run -ti --rm -p 27017:27017 mongo:4.0
 
 ## odo
 
+### Without devfile:
+
 ```shell script
+odo login
 odo project create odo-test-project
 odo catalog list components
 odo create java-quarkus quark-mongo --now
@@ -34,7 +44,44 @@ oc get pods
 oc describe pods quark-mongo-8477ff7ddc-8d4hk
 odo url create --now
 odo log -f
+```
 
+### With devfile:
+
+```shell script
+odo login
+odo project create odo-test-project
+odo create quark-mongo --devfile ./devfile-with-mongodb.yaml --now
+oc describe pods quark-mongo-6dcc4c5776-9d896
+oc logs -f quark-mongo-6dcc4c5776-9d896 -c mongodb
+oc get pods
+oc describe pods quark-mongo-8477ff7ddc-8d4hk
+odo url create --now
+odo log -f
+```
+
+### Debug
+
+```shell script
+odo push --debug
+odo debug-portforward
+```
+
+Then configure your debugger to connect localhost:5858 , add a
+breakpoint somewhere and hit the endpoint.
+
+### Continuous development
+
+```shell script
+odo watch
+```
+
+And your local changes will be moved to a running pod.
+
+### Cleanup
+
+```shell script
+odo delete
 ```
 
 ## Running the application in dev mode
