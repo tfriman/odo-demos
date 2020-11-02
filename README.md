@@ -14,11 +14,20 @@ odo registry add tfriman-github-registry "https://github.com/tfriman/odo-demos/t
 
 #### Using bitbucket
 
-Find out the raw path
+Use head
+
+```
+odo registry add tfriman-bitbucket-registry https://bitbucket.org/tfriman/odo-devfile-registry/raw/HEAD
+```
+
+
+Or specific SHA:
 
 ```
 odo registry add tfriman-bitbucket-registry https://bitbucket.org/tfriman/odo-devfile-registry/raw/4c04539cfa4700915d446a89474f7edbda14feff
 ```
+
+
 
 #### Smoke check after addition
 
