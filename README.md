@@ -9,7 +9,7 @@ Registry has an xxample devfile containing MongoDB, base copied from [https://gi
 #### Using github and main branch:
 
 ```shell script
-odo registry add tfriman-registry "https://github.com/tfriman/odo-demos/tree/main"
+odo registry add tfriman-github-registry "https://github.com/tfriman/odo-demos/tree/main"
 ```
 
 #### Using bitbucket
@@ -17,7 +17,7 @@ odo registry add tfriman-registry "https://github.com/tfriman/odo-demos/tree/mai
 Find out the raw path
 
 ```shell script
-odo registry update tfriman-bitbucket-registry https://bitbucket.org/tfriman/odo-devfile-registry/raw/4c04539cfa4700915d446a89474f7edbda14feff
+odo registry add tfriman-bitbucket-registry https://bitbucket.org/tfriman/odo-devfile-registry/raw/4c04539cfa4700915d446a89474f7edbda14feff
 ```
 
 #### Smoke check after addition
@@ -30,7 +30,7 @@ odo catalog list components
 
 ```
 NAME                   DESCRIPTION                                   REGISTRY
-java-maven-mongodb     Upstream Maven and OpenJDK 11 and MongoDB     tfriman-registry
+java-maven-mongodb     Upstream Maven and OpenJDK 11 and MongoDB     tfriman-bitbucket-registry
 java-maven             Upstream Maven and OpenJDK 11                 DefaultDevfileRegistry
 ```
 
