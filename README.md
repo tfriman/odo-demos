@@ -13,6 +13,18 @@ odo registry add tfriman-registry "https://github.com/tfriman/odo-demos"
 
 Check you have it:
 
-```
+```shell script
 odo catalog list components
+```
+
+```
+NAME                   DESCRIPTION                                   REGISTRY
+java-maven-mongodb     Upstream Maven and OpenJDK 11 and MongoDB     tfriman-registry
+java-maven             Upstream Maven and OpenJDK 11                 DefaultDevfileRegistry
+```
+
+#### Using your custom devfile from custom registry
+
+```shell script
+odo create java-maven-mongodb custom-devfile-example --now
 ```
