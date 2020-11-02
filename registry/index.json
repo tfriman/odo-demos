@@ -1,0 +1,17 @@
+[
+  {
+    "name": "java-maven-mongodb",
+    "displayName": "Maven Java MongoDB Quarkus",
+    "description": "Upstream Maven and OpenJDK 11 and MongoDB",
+    "tags": [
+      "Java",
+        "Maven",
+        "Quarkus",
+        "MongoDB"
+    ],
+    "projectType": "maven",
+    "language": "java",
+    "links": {
+      "self": "/devfiles/quarkus-mongodb/devfile.yaml"
+    }
+  }]
