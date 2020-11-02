@@ -2,7 +2,7 @@
 
 ## Customized registry
 
-Example registry with devfile containing MongoDB
+Registry has an xxample devfile containing MongoDB, base copied from [https://github.com/odo-devfiles/registry](https://github.com/odo-devfiles/registry). See [https://odo.dev/docs/secure-registry/](https://odo.dev/docs/secure-registry/) for info how to access secured git repo.
 
 ### Adding new registry to odo
 
