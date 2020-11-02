@@ -38,12 +38,20 @@ odo project create odo-test-project
 odo catalog list components
 odo create java-quarkus quark-mongo --now
 git add devfile.yaml
-oc describe pods quark-mongo-6dcc4c5776-9d896
-oc logs -f quark-mongo-6dcc4c5776-9d896 -c mongodb
-oc get pods
-oc describe pods quark-mongo-8477ff7ddc-8d4hk
+oc describe deployments/quark-mongo
+oc logs -f deployments/quark-mongo -c tools
+oc logs -f deployments/quark-mongo -c mongodb
 odo url create --now
 odo log -f
+```
+
+If you have installed custom registry, you can try out this:
+
+```shell script
+odo create java-maven-mongodb custom-devfile-example --now
+oc describe deployments/custom-devfile-example
+oc logs -f deployments/custom-devfile-example -c tools
+oc logs -f deployments/custom-devfile-example -c mongodb
 ```
 
 ### With devfile:
