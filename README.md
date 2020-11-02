@@ -8,7 +8,7 @@ Registry has an xxample devfile containing MongoDB, base copied from [https://gi
 
 #### Using github and main branch:
 
-```shell script
+```
 odo registry add tfriman-github-registry "https://github.com/tfriman/odo-demos/tree/main"
 ```
 
@@ -16,7 +16,7 @@ odo registry add tfriman-github-registry "https://github.com/tfriman/odo-demos/t
 
 Find out the raw path
 
-```shell script
+```
 odo registry add tfriman-bitbucket-registry https://bitbucket.org/tfriman/odo-devfile-registry/raw/4c04539cfa4700915d446a89474f7edbda14feff
 ```
 
@@ -24,7 +24,7 @@ odo registry add tfriman-bitbucket-registry https://bitbucket.org/tfriman/odo-de
 
 Check you can access your new registry
 
-```shell script
+```
 odo catalog list components
 ```
 
@@ -36,7 +36,7 @@ java-maven             Upstream Maven and OpenJDK 11                 DefaultDevf
 
 #### Using your custom devfile from custom registry
 
-```shell script
+```
 cd example-quarkus-mongodb-with-devfile
 odo create java-maven-mongodb custom-devfile-example --now
 ```
