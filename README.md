@@ -26,5 +26,6 @@ java-maven             Upstream Maven and OpenJDK 11                 DefaultDevf
 #### Using your custom devfile from custom registry
 
 ```shell script
+cd example-quarkus-mongodb-with-devfile
 odo create java-maven-mongodb custom-devfile-example --now
 ```
