@@ -6,12 +6,23 @@ Registry has an xxample devfile containing MongoDB, base copied from [https://gi
 
 ### Adding new registry to odo
 
-```shell script
-odo registry add tfriman-registry "https://github.com/tfriman/odo-demos"
+#### Using github and main branch:
 
+```shell script
+odo registry add tfriman-registry "https://github.com/tfriman/odo-demos/tree/main"
 ```
 
-Check you have it:
+#### Using bitbucket
+
+Find out the raw path
+
+```shell script
+odo registry update tfriman-bitbucket-registry https://bitbucket.org/tfriman/odo-devfile-registry/raw/4c04539cfa4700915d446a89474f7edbda14feff
+```
+
+#### Smoke check after addition
+
+Check you can access your new registry
 
 ```shell script
 odo catalog list components
