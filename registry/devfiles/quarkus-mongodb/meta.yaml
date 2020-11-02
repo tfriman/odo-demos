@@ -1,0 +1,6 @@
+name: java-quarkus-mongodb
+displayName: Quarkus Java with MongoDB
+description: Upstream Quarkus with Java+GraalVM and MongoDB
+tags: ["Java", "Quarkus", "MongoDB"]
+projectType: "quarkus"
+language: "java"
