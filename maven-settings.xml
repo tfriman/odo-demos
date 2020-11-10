@@ -7,7 +7,7 @@
         <repository>
           <id>local-repository</id>
           <name>cache repository</name>
-          <url>http://maven-cache:8080/repository/</url>
+          <url>http://caching-maven-proxy:8080/repository/</url>
           <releases>
             <enabled>true</enabled>
             <updatePolicy>never</updatePolicy>
@@ -22,7 +22,7 @@
         <pluginRepository>
           <id>local-repository</id>
           <name>cache repository</name>
-          <url>http://maven-cache:8080/repository/</url>
+          <url>http://caching-maven-proxy:8080/repository/</url>
           <releases>
             <enabled>true</enabled>
             <updatePolicy>never</updatePolicy>
